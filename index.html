@@ -13,17 +13,20 @@
     <div id="root">
 
         <div class="container">
-
+            
             <ul class="todo-list">
-                <li class="todo-item">
-                    fare la spesa
+                <li @click="toggleDone(index)" v-for="(dos, index) in todos" class="todo-item" :class="dos.isDone ? 'done' : ''">
+                    <p>{{ dos.text }}</p>
+                    <hr>
+                </li>
+                <!-- <li class="todo-item">
+                    <p>fare la spesa</p>
+                    <hr>
                 </li>
                 <li class="todo-item">
-                    fare la spesa
-                </li>
-                <li class="todo-item">
-                    fare la spesa
-                </li>
+                    <p>fare la spesa</p>
+                    <hr>
+                </li>    -->
             </ul>
             
         </div>

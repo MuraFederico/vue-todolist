@@ -3,12 +3,22 @@ const app = new Vue({
     data: {
         todos: [
             {
-                text: '',
+                text: 'fare la spesa',
                 isDone: false,
-            }
+            },
+            {
+                text: 'lavare i piatti',
+                isDone: true,
+            },
+            {
+                text: 'allenarsi',
+                isDone: false,
+            },
         ],
     },
     methods: {
-
+        toggleDone(index) {
+            this.todos[index].isDone = !this.todos[index].isDone
+        }
     },
 })
