@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
+        newDo: '',
         todos: [
             {
                 text: 'fare la spesa',
@@ -22,6 +23,12 @@ const app = new Vue({
         },
         removeItem(index) {
             this.todos.splice(index, 1);
+        },
+        addItem() {
+            if (!this.newDo.trim() == '') {
+                this.todos.unshift({text:this.newDo.trim(), isDone: false});
+            }
+            this.newDo = '';
         }
     },
 })

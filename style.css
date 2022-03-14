@@ -15,6 +15,22 @@ button:hover {
     cursor: pointer;
 }
 
+.add-item {
+    width: 40%;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.add-item input {
+    flex-grow: 1000000;
+    margin-right: 1rem;
+}
+
+.btn-add {
+    flex-grow: 1;
+    border: 1px solid gray;
+}
+
 .container {
     height: 100vh;
     
@@ -41,6 +57,7 @@ button:hover {
 
 .todo-item span{
     padding: 1rem 0;
+    flex-grow: 1;
 }
 
 .todo-item:hover {

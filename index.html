@@ -13,10 +13,13 @@
     <div id="root">
 
         <div class="container">
-            
+            <div class="add-item">
+                <input @keyup.enter="addItem" v-model="newDo" type="text" size="1" placeholder="Nuovo ToDo">
+                <button @click="addItem" class="btn-add">Aggiungi</button>
+            </div>
             <ul class="todo-list">
-                <li @click="toggleDone(index)" v-for="(dos, index) in todos" class="todo-item" :class="dos.isDone ? 'done' : ''">
-                    <span>{{ dos.text }}</span>
+                <li v-for="(dos, index) in todos" class="todo-item" :class="dos.isDone ? 'done' : ''">
+                    <span @click="toggleDone(index)">{{ dos.text }}</span>
                     <button @click="removeItem(index)">X</button>
                 </li>
                 <!-- <li class="todo-item">
