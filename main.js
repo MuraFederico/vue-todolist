@@ -18,7 +18,10 @@ const app = new Vue({
     },
     methods: {
         toggleDone(index) {
-            this.todos[index].isDone = !this.todos[index].isDone
+            this.todos[index].isDone = !this.todos[index].isDone;
+        },
+        removeItem(index) {
+            this.todos.splice(index, 1);
         }
     },
 })

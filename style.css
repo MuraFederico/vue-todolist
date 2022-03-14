@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+button {
+    font-size: 20px;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .container {
     height: 100vh;
     
@@ -21,16 +32,24 @@
     list-style: none;
 }
 
-.todo-item p{
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.todo-item span{
     padding: 1rem 0;
 }
 
 .todo-item:hover {
     background-color: white;
+    cursor: pointer;
 }
 
 
 
-.done {
+.done span{
     text-decoration: line-through;
 }
