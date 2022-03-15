@@ -18,18 +18,10 @@
                 <button @click="addItem" class="btn-add">Aggiungi</button>
             </div>
             <ul class="todo-list">
-                <li v-for="(dos, index) in todos" class="todo-item" :class="dos.isDone ? 'done' : ''">
+                <li v-for="(dos, index) in todos" class="todo-item" :class="{'done': dos.isDone }">
                     <span @click="toggleDone(index)">{{ dos.text }}</span>
                     <button @click="removeItem(index)">X</button>
                 </li>
-                <!-- <li class="todo-item">
-                    <p>fare la spesa</p>
-                    <hr>
-                </li>
-                <li class="todo-item">
-                    <p>fare la spesa</p>
-                    <hr>
-                </li>    -->
             </ul>
             
         </div>
